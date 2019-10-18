@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CYPHER</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="stylesheet/nav.css">
+<link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<style>
+
+body{
+  background-image:url(background5.jpg);
+  font-family: 'Cinzel';
+  font-weight:bold;
+  font-size: 17px;
+
+  position: absolute;
+  color:Blue;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+h1{
+  font-family: 'Cinzel';
+  font-weight:bold;
+  font-size: 57px;
+
+  position: absolute;
+  color:white;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.topnav {font-family:'Cinzel Decorative';font-weight: bold;
+      }
+
+.topnav {
+  overflow: hidden;
+background: linear-gradient(to right,#0D1DA5  0%,#040C54 100%);
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #181CA2;
+  color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: #181CA2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+.mySlides {display:none;}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  margin-left: 30%;
+  margin-top: 10%;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+
+    <a href="login.html">Login</a>
+    <a href="signup.html">SignUp</a>
+    <a href="Contact.html">Contact</a>
+    <a href="registration.html">Registration</a>
+
+    <a href="videos.html">Videos</a>
+    <div class="dropdown">
+      <button class="dropbtn"> Inter-clg events
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="blood.html">Blood Donation camp</a>
+        <a href="quiz.html"class="active">Coding Competition</a>
+
+      </div>
+
+    </div>
+    <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Workshops</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="pastworkshop.html"class="active">Past workshops</a>
+    <a href="upcomingworkshop.html">Upcoming workshops</a>
+
+    </div>
+    </div>
+    <a href="events.html">Gallery</a>
+    <a href="about.html">About</a>
+
+    <a href="11.html" >Home</a>
+    <img src="images/logo5.png" alt="logo image" style="width:5%;height:10%;">
+    <div class="topnav" id="grad1" style="text-align:center;margin:auto;color:#888888;font-size:40px;font-weight:bold">
+
+    </div>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a><div class="search-container">
+  </div>
+  </div>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/registration.php">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Name">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="name@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="Rajeev Institute of Technology">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Hassan">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="Name">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <input type="submit" value="Submit" class="btn">
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+
+  </div>
+</div>
+<footer style="font-family:'Cinzel';margin-top:11%;color:white;">
+  <div class="row" >
+
+  <center><h6 style="font-family:'Cinzel';">CYPHER</h6>
+       <p>Contact:+91 8796574554</p>
+       <p>mail:cyphertheclub@gmail.com</p>
+      <div id="footerimage">
+       <a href="https://www.facebook.com">
+     <img class="facebook" src="images/facebook.png"style="width:2%;height:5%;"/></a>
+                     <a href="https://www.instagram.com/">
+     <img class="instagram" src="images/insta.png"style="width:2%;height:5%;"/></a>
+                     <a href="https://www.youtube.com/">
+     <img class="Youtube" src="images/youtube.png"style="width:2%;height:5%;"/></a>
+      <a href="https://www.twitter.com">
+     <img class="twitter" src="images/twitter.png" style="width:2%;height:5%;"/></a>
+
+   </div>
+
+</center>
+
+
+
+</footer>
+
+<script>
+
+function myFunction() {
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+    x.className += " responsive";
+} else {
+    x.className = "topnav";
+}
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<html>
+		<head>
+			<title>ORCHID</title>
+    	<link rel="stylesheet" href="stylesheetsmain/style.css" />
+			<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    	<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<style>
+	  		body {
+	    		margin: 0;
+	    		font-family: Arial, Helvetica, sans-serif;
+					background-image: url(images\33.jpg);
+	  		}
+				#grad1 {
+    height: 55px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(to right,#662D8C 0%,#ED1E79 100%); /* Standard syntax (must be last) */
+}
+
+	  		.topnav {
+	    	overflow: hidden;
+	    	background-color: #622774;
+	  		}
+
+	  		.topnav a {
+	    	float: left;
+	    	color: #f2f2f2;
+	    	text-align: center;
+	    	padding: 14px 16px;
+	    	text-decoration: none;
+	    	font-size: 17px;
+	    	font-family: "Pacifico", cursive, sans-serif;
+	  		}
+
+	  		.topnav a:hover {
+	    	background-color:#C53364;
+	    	color: white;
+				}
+
+	  		.topnav a.active {
+	    	background-color: #C53366;
+	    	color: white;
+	     	font-family: "Pacifico", cursive, sans-serif;
+	  		}
+				.li{
+					background-color:linear-gradient(to right,  blue, indigo, violet);
+					color:white;
+					font-family: fantasy;
+				}
+				.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: linear-gradient(to right,#808080 0%,#E6E6E6 100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: white;
+}
+
+.sidenav .closebtn {
+    position:absolute;
+    top: 0;
+    right: 50px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+body{
+	color:white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+	  		</style>
+	  </head>
+
+				<body background=images/Capture.PNG>
+
+
+						<div class="topnav" id="grad1" style="text-align:left;margin:auto;color:white;font-size:40px;font-weight:bold">
+
+							<div id="mySidenav" class="sidenav">
+				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+				  <b><a href="mens.html">Mens</a></b>
+				  <b><a href="women.html">Womens</a></b>
+
+				  </div>
+
+					<class="topnav" span style="font-size:30px;cursor:pointer background-color="white"" onclick="openNav()">&#9776;</span>
+
+								<ul class="nav  navbar-right">
+						<b><a class="active" href="#index">Home</a></b>
+						<b><a href="about.html">About</a></b>
+						<b><a href="contact.html">Contact</a></b>
+						<b><a href="login.html">Login</a></b>
+
+
+						<a href="mycart.html">
+							<span class="glyphicon glyphicon-shopping-cart"></span>
+						</a>
+						<form class="form-inline navbar-form navbar-right">
+						<div class="form-group">
+						<div class="input-group">
+						<div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+						<input type="text" class="form-control" id="exampleInputAmount" placeholder="Search for products">
+						</div>
+						</div>
+						</form>
+
+						<div class="topnav" id="grad1" style="text-align:center;margin:auto;color:#888888;font-size:40px;font-weight:bold">
+
+						</div>
+
+					</div>
+
+
+
+  	<img class="mySlides" src="images/businessman.jpg" style="width:100%; height:110%;">
+		<img class="mySlides" src="images/11.jpg" style="width:100%; height: 100%;">
+	  <img class="mySlides" src="images/12.jpg" style="width:100%; height:100%;">
+		<img class="mySlides" src="images/coding.jpg" style="width:100%; height: 100%;">
+	  <img class="mySlides" src="images/coding1.jpg" style="width:100%; height: 100%;">
+		<img class="mySlides" src="images/technology.jpg" style="width:100%; height: 100%;">
+		<img class="mySlides" src="images/1p.jpg" style="width:100%; height: 100%;">
+	  </div>
+
+	  <div class="container">
+    <div class="row">
+    <div class="col-md-4">
+    <div class="thumbnail">
+    <a href="mens.html" titlt="Mens" target="_blank">
+    <img src="images/71.jpg" alt="Lights" style="width:100%; height: 50%;">
+    <div class="caption">
+    <p>Mens apparel</p>
+
+    </div>
+    </a>
+    </div>
+    </div>
+
+    <div class="col-md-4">
+    <div class="thumbnail">
+    <a href="womens.html" title="mens wear" target="_blank">
+    <img src="images/80.jpg" alt="mens wear" style="width:100%;height: 50%; ">
+    <div class="caption">
+    <p>Womens apparel</p>
+    </div>
+    </a>
+    </div>
+    </div>
+
+
+		<script>
+  	var myIndex = 0;
+	  carousel();
+
+  	function carousel() {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < x.length; i++) {
+	  x[i].style.display = "none";
+	  }
+	  myIndex++;
+	  if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+	}
+	function openNav() {
+					    document.getElementById("mySidenav").style.width = "250px";
+					}
+
+					function closeNav() {
+					    document.getElementById("mySidenav").style.width = "0";
+					}
+
+
+
+
+</script>
+
+
+	  </body>
+
+</html>
